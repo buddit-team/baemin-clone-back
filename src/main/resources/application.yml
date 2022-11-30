@@ -4,6 +4,19 @@ server:
     encoding:
       charset: UTF-8
 spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://database-1.cckffb5kga67.ap-northeast-2.rds.amazonaws.com:5432/baemin
+    username: woowa
+    password: woowa
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    naming:
+      physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
   servlet:
     multipart:
       max-file-size: 1MB
